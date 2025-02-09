@@ -12,6 +12,9 @@ export default function formatResponse(response: string) {
    // Barra invertida
    res = res.replace(/\\\\/g, "\\");
 
+   // Substituir ** por <strong>
+   res = res.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
    // 
    res = res.replace(/```json|```/g, "").trim();
 

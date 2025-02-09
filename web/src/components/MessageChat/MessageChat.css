@@ -1,0 +1,100 @@
+.message-user {
+   display: flex;
+   justify-content: flex-end;
+
+   & p {
+      background: linear-gradient(45deg, #5F6465, #23393C);
+      max-width: 40%;
+      padding: .5rem;
+      padding-right: 1rem;
+      border-radius: 8px 20px 0 8px;
+   }
+}
+
+.message-bot {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-end;
+   gap: 10px;
+   margin-bottom: 1rem;
+
+   & img {
+      width: 80px;
+      height: 80px;
+   }
+
+   & p {
+      border: 1px solid white;
+      font-weight: 600;
+      max-width: 40%;
+      padding: .5rem;
+      padding-left: 1rem;
+      border-radius: 20px 8px 8px 0;
+
+      &.other-messages {
+         margin-left: 90px;
+      }
+
+      &.last-message {
+         margin-bottom: 40px;
+      }
+   }
+}
+
+.message-searching {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-end;
+   gap: 10px;
+   margin-bottom: 1rem;
+
+   & img {
+      width: 80px;
+      height: 80px;
+   }
+
+   & p {
+      background: linear-gradient(45deg, #253538, #2b7882);
+      border: 1px solid white;
+      font-weight: 600;
+      max-width: 40%;
+      padding: 0 .5rem;
+      border-radius: 10px 8px 8px 0;
+      margin-bottom: 65px;
+
+      display: flex;
+      gap: .2rem;
+
+      & span {
+         font-size: 20px;
+      }
+   }
+}
+
+
+#point1 {
+   animation: moveTop 1s infinite ease-in-out ;
+   animation-delay: .4s;
+}
+
+#point2 {
+   animation: moveTop 1s infinite ease-in-out ;
+   animation-delay: .5s;
+}
+
+#point3 {
+   animation: moveTop 1s infinite ease-in-out;
+   animation-delay: .6s;
+}
+
+@keyframes moveTop {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-3px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}

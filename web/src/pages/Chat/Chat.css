@@ -1,0 +1,118 @@
+main {
+   width: 100vw;
+   height: calc(100vh - 70px);
+
+   & #chat {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      & img#img-bot-hello {
+         position: absolute;
+         z-index: 1;
+         top: 160px;
+         right: 280px;
+         transform: rotate(20deg);
+      }
+
+      /* Initial render */
+      & #content-chat-initial {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+
+         width: 500px;
+         height: 170px;
+         position: relative;
+         z-index: 2;
+         padding: 1rem;
+         background: linear-gradient(45deg, #3a4a4b, #373939);
+
+         border-radius: 10px;
+
+         & p {
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 0.8px;
+         }
+      }
+
+      /* Messages */
+      & #render-messages {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         gap: 1rem;
+         width: 100%;
+         max-width: 1200px;
+         height: 100%;
+         padding: 1rem;
+         transform: scale(0.9);
+
+         & #content-chat {
+            display: flex;
+            overflow-y: auto;
+
+            & #messages {
+               width: 100%;
+               padding-bottom: 50px;
+               padding: 0 1rem;
+               overflow-y: auto;
+               display: flex;
+               flex-direction: column;
+               gap: .5rem;
+
+               &::-webkit-scrollbar {
+                  width: 10px; /* Largura da barra vertical */
+                  height: 10px; /* Altura da barra horizontal */
+               }
+
+               &::-webkit-scrollbar {
+                  width: 7px; /* Largura da barra vertical */
+               }
+
+               /* Estiliza o "thumb" (a parte que você arrasta) */
+               &::-webkit-scrollbar-thumb {
+                  background: var(--grandient-logo); /* Cor do thumb */
+                  border-radius: 10px;
+               }
+
+               /* Estiliza o thumb quando o mouse está sobre ele */
+               &::-webkit-scrollbar-thumb:hover {
+                  background: #27637a; /* Cor ao passar o mouse */
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 800px) {
+   #messages {
+      min-width: 600px;
+   }
+}
+
+@media (max-width: 600px) {
+   #messages {
+      min-width: calc(100vw);
+      transform: scale(.9);
+   }
+}
+
+@media (min-width: 800px) {
+   #messages {
+      min-width: 800px;
+   }
+}
+
+@media (min-width: 1000px) {
+   #messages {
+      min-width: 1000px;
+   }
+}

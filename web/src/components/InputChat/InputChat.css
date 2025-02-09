@@ -1,0 +1,45 @@
+#input-chat {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 800px;
+   background-color: red;
+   padding: 0.5rem 1rem;
+   border-radius: 20px;
+   background: linear-gradient(#84928a, #6c7b75);
+
+   & form {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      & input {
+         width: 85%; 
+         font-size: 16px;
+         background: none;
+         border: none;
+         outline: none;
+         color: #d9d9d9;
+
+         &::placeholder {
+            color: #d2c3bf; /* Cor desejada para o placeholder */
+            opacity: 1; /* Opcional: define a opacidade do placeholder */
+         }
+      }
+
+      & button {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #d9d9d9;
+         outline: none;
+         border: none;
+         border-radius: 50%;
+         cursor: pointer;
+
+         & img {
+            padding: 0.5rem;
+         }
+      }
+   }
+}
