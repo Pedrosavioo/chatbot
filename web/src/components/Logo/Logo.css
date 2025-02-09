@@ -1,0 +1,25 @@
+header {
+   padding: 1rem 2rem;
+
+   & div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      & p {
+         font-size: 2.2rem;
+         height: 40px;
+         font-weight: bold;
+         background: var(--grandient-logo);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         text-transform: uppercase;
+         letter-spacing: 0.8px;
+      }
+
+      & img {
+         width: 45px;
+         height: 40px;
+      }
+   }
+}
